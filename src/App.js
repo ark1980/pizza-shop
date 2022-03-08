@@ -1,10 +1,11 @@
 import GlobalStyle from "./GlobalStyle";
+import Navbar from './navbar/Navbar';
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <h1>Hello World!</h1>
+      <Navbar />
     </>
   );
 }

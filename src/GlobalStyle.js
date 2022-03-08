@@ -8,10 +8,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: #fafafa;
     box-sizing: border-box;
     }
-
-    h1,h2,h3 {
-      font-family: 'Quicksand', sans-serif;
-    }
   `;
 
   export default GlobalStyle;
