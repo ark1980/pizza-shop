@@ -1,6 +1,7 @@
 import GlobalStyle from "./GlobalStyle";
 import Navbar from './navbar/Navbar';
 import { Banner } from "./banner/Banner";
+import Menu from "./menu/Menu";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <GlobalStyle />
       <Navbar />
       <Banner />
+      <Menu />
     </>
   );
 }

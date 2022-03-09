@@ -3,7 +3,7 @@ import { pizzaRed } from '../Styles/colors.js';
 import { Title } from '../Styles/title.js';
 
 const NavbarStyled = styled.nav`
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
