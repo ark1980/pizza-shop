@@ -7,7 +7,7 @@ const NavbarStyled = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 2rem;
+  padding: 2rem;
   background-color: ${pizzaRed};
   color: #fff;
   font-size: 1.2rem;
