@@ -10,10 +10,12 @@ const FoodItemStyled = styled.div`
   background-size: cover;
   background-position: center;
   filter: contrast(75%);
+  transition: filter .2s, box-shadow .2s;
 
   &:hover {
     cursor: pointer;
     filter: contrast(100%);
+    box-shadow: 3px 3px 5px #BEBEBE;
   }
 `;
 
