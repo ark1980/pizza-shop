@@ -63,3 +63,14 @@ export const foodItems = [
     price: 4.5 
   },
 ];
+
+export const allFoods = foodItems.reduce((res, food) => {
+  const foodCategory = food.section
+  
+  if(!res[foodCategory]) {
+    res[foodCategory] = [];
+  }
+  res[foodCategory].push(food);
+
+  return res;
+}, {})
