@@ -3,7 +3,11 @@ import { pizzaRed } from '../Styles/colors.js';
 import { Title } from '../Styles/title.js';
 
 const NavbarStyled = styled.nav`
-  max-width: 100%;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,6 +21,7 @@ const NavbarStyled = styled.nav`
 
 const Logo = styled(Title)`
   font-size: 2rem;
+  color: #ffffff;
   font-weight: bold;
 `;
 

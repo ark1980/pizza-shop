@@ -6,16 +6,16 @@ import { Title } from '../Styles/title';
 import { pizzaRed } from '../Styles/colors.js';
 
 const MenuStyled = styled.div`
-  width: 80%;
-  margin: 2rem auto;
-
+  width: 70%;
+  padding-right: .7rem;
+  
   h2 {
     margin: 2rem 0 1rem;
   }
 `;
 
 const MenuHeader = styled(Title)`
-   font-size: 1.7rem;
+  font-size: 1.7rem;
   font-weight: bold;
   background-color: ${pizzaRed};
   display: inline-block;
@@ -24,7 +24,7 @@ const MenuHeader = styled(Title)`
   color: #ffffff;
   text-shadow: 3px 3px 5px #2c2c2c;
   box-shadow: 3px 3px 5px #2c2c2c;
-  margin: 2rem 0;
+  margin: 0  0 1rem 0;
 `
 
 
@@ -36,7 +36,6 @@ const Menu = () => {
       {
         Object.entries(allFoods).map(([category, foods]) => (
           <>
-          {console.log(category)}
             <h2>{category}</h2>
             <FoodGrid>
               {foods.map(food => (

@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 const FoodItemStyled = styled.div`
-  border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 1em;
-  height: 200px;
+  height: 120px;
   padding: 0 1em 1em .5rem;
   background-image: ${({img}) => `url(${img})`};
   background-size: cover;
