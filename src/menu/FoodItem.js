@@ -26,9 +26,14 @@ const FoodLabel = styled.span`
   border-radius: 5px;
 `;
 
-const FoodItem = ({food}) => {
+const FoodItem = ({food, openModal, getFoodInfo}) => {
   return(
-    <FoodItemStyled img={food.img}>
+    <FoodItemStyled img={food.img} 
+      onClick={() => {
+        openModal()
+        getFoodInfo(food)
+      }}
+    >
       <FoodLabel>
         <h3>{food.name}</h3>
       </FoodLabel>

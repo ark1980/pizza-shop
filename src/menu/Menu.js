@@ -29,7 +29,7 @@ const MenuHeader = styled(Title)`
 
 
 
-const Menu = () => {
+const Menu = ({openModal, getFoodInfo}) => {
   return (
     <MenuStyled>
       <MenuHeader>Popular Items</MenuHeader>
@@ -39,7 +39,12 @@ const Menu = () => {
             <h2>{category}</h2>
             <FoodGrid>
               {foods.map(food => (
-                <FoodItem key={food.id} food={food} />
+                <FoodItem
+                  key={food.id} 
+                  food={food}
+                  openModal={openModal}
+                  getFoodInfo={getFoodInfo}
+                />
               ))}
             </FoodGrid>
           </>
