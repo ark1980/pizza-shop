@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components'
+import Button from '../Styles/Button'
 
 const BackdropModal = styled.div`
   background-color: rgba(0,0,0,.75);
@@ -17,22 +18,56 @@ const OverlayModal = styled.div`
   color: #333;
   width: 500px;
   margin: 0 auto;
-  padding: 1rem;
-  height: calc(100% - 100px);
+  max-height: calc(100% - 100px);
   z-index: 10000;
   position: fixed;
   top: 50px;
   left: calc(50% - 250px);
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 `;
 
+const Modalheader = styled.div`
+  background-image: ${({img}) => `url(${img})`};
+  width: 100%;
+  min-height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px 20px 0 0;
+`
+const ModalContent = styled.div`
+  width: 100%;
+  padding: 1.5rem;
+  overflow: auto;
+`
+
+const ModalFooter = styled.div`
+  width: 100%;
+  padding: 2rem 0;
+  border-radius:0 0 20px 20px;
+  box-shadow: 0px -5px 5px #bebebe;
+  text-align: center;
+`
+
 const Modal = ({isOpen, openModal, food}) => {
+
+  const clickHandler = () => {
+    console.log('clicked')
+  }
+
   if (isOpen) {
     return ReactDOM.createPortal(
       <>
         <OverlayModal>
-          <h1>{food.name}</h1>
-          <p>{`$${food.price}`}</p>
+          <Modalheader img={food.img}/>
+          <ModalContent>
+            <h2>{food.name}</h2>
+            <p>${food.price}</p>
+          </ModalContent>
+          <ModalFooter>
+            <Button action={clickHandler} text={'Add to cart'}/>
+          </ModalFooter>
         </OverlayModal>
       <BackdropModal onClick={() => openModal()} />
       </>,
