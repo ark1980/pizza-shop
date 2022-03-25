@@ -73,4 +73,4 @@ export const allFoods = foodItems.reduce((res, food) => {
   res[foodCategory].push(food);
 
   return res;
-}, {})
+}, {});

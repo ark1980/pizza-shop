@@ -44,16 +44,21 @@ const ModalContent = styled.div`
 
 const ModalFooter = styled.div`
   width: 100%;
-  padding: 2rem 0;
+  padding: 1rem 0;
   border-radius:0 0 20px 20px;
   box-shadow: 0px -5px 5px #bebebe;
   text-align: center;
 `
 
-const Modal = ({isOpen, openModal, food}) => {
+const Modal = ({ isOpen, openModal, food, orders, setOrders }) => {
+  const order = {
+    name: food.name,
+    price: food.price,
+  }
 
-  const clickHandler = () => {
-    console.log('clicked')
+  const addToOrder = () => {
+    setOrders([...orders, order]);
+    openModal(false);
   }
 
   if (isOpen) {
@@ -66,7 +71,7 @@ const Modal = ({isOpen, openModal, food}) => {
             <p>${food.price}</p>
           </ModalContent>
           <ModalFooter>
-            <Button action={clickHandler} text={'Add to cart'}/>
+            <Button action={addToOrder} text={'add to order'}/>
           </ModalFooter>
         </OverlayModal>
       <BackdropModal onClick={() => openModal()} />

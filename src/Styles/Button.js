@@ -2,13 +2,13 @@ import styled from 'styled-components'
 import { pizzaRed } from '../Styles/colors'
 
 const ButtonStyled  = styled.button`
-  font-family: 'Quicksand', sans-serif;
-  padding: 1rem 1.5rem;
+  font-family: inherit;
+  padding: .7rem 1.5rem;
   background-color: ${pizzaRed};
   color: #ffffff;
   font-size: 1.1em;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
 `
 

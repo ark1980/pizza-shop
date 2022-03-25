@@ -11,6 +11,7 @@ function App() {
 
   const [isOpen, setIsOpen] =useState(false);
   const [foodInfo, setFoodInfo] = useState({});
+  const [orders, setOrders] = useState([]);
 
   const openModal = () => {
     setIsOpen(!isOpen);
@@ -22,13 +23,13 @@ function App() {
 
   return (
     <>
-      <Modal isOpen={isOpen} openModal={openModal} food={foodInfo} />
+      <Modal orders={orders} setOrders={setOrders} isOpen={isOpen} openModal={openModal} food={foodInfo} />
       <GlobalStyle />
       <Navbar />
       <Banner />
       <MainContainer>
         <Menu openModal={openModal} getFoodInfo={getFoodInfo}/>
-        <Order />
+        <Order orders={orders} setOrders={setOrders}/>
       </MainContainer>
     </>
   );
