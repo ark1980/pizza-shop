@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { priceFormatter } from '../data/FoodData'
 
 const FoodItemStyled = styled.div`
   border-radius: 5px;
@@ -36,6 +37,7 @@ const FoodItem = ({food, openModal, getFoodInfo}) => {
     >
       <FoodLabel>
         <h3>{food.name}</h3>
+        <h4 >{priceFormatter(food.price)}</h4>
       </FoodLabel>
     </FoodItemStyled>
   )
