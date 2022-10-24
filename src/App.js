@@ -27,6 +27,7 @@ function App() {
       <GlobalStyle />
       <Navbar />
       <Banner />
+      <Banner />
       <MainContainer>
         <Menu openModal={openModal} getFoodInfo={getFoodInfo}/>
         <Order orders={orders} setOrders={setOrders}/>
